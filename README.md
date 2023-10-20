@@ -5,11 +5,11 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=alan890104" alt="alan890104" /></a> </p>
 
-- 🔭 I’m currently working on **Credit Review System of NYCU**
+- 🔭 I’m currently working on [**Ton Dynasty Contracts**](https://github.com/Ton-Dynasty/tondynasty-contracts)
 
-- 🌱 I’m currently learning **Analysis on safety of blockchain**
+- 🌱 I’m currently learning **The Open Network | Security analysis of blockchain**
 
-- 💬 Ask me about **golang, vue, k8s, devOps, gitOps**
+- 💬 Ask me about **soidity, tact, golang, vue, k8s, devOps, gitOps**
 
 - 📫 How to reach me **alan890104@gmail.com**
 
