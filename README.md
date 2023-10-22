@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Hsu, Yu Lun</h1>
-<h3 align="center">A full-stack engineer</h3>
+<h3 align="center">Co-Founder of Ton Dynasty</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=alan890104&label=Profile%20views&color=0e75b6&style=flat" alt="alan890104" /> </p>
 
