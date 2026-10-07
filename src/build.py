@@ -303,7 +303,7 @@ def plate(t, d, n, form, motif):
     stats = d['forms'].get(form['key'], {})
     name_size = min(80, 470 / SERIF.width(form['name'], 1))
     lines = SERIF.wrap(form['line'], 29, 470)[:2]
-    meta = [(fmt(stats['stars']), 'stars')] if 'stars' in stats else []
+    meta = [(fmt(stats['stars']), 'stars')] if stats.get('stars') else []
     if stats.get('downloads'):
         meta.append((fmt(stats['downloads']), 'downloads'))
     meta_svg, x = '', 48
