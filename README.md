@@ -4,7 +4,7 @@
 
 Founder of [Torch Finance](https://torch.finance), stablecoin liquidity on TON and Curve Finance's official TVM partner.
 
-Kata is Japanese for form: a short sequence you repeat every day, until one day it blooms. I build software the same way. These days the forms are speech recognition that runs on your own machine, and small tools that make coding agents easier to live with.
+Kata is Japanese for form: a short sequence you repeat every day, until one day it blooms. I build software the same way. These days the forms are speech recognition that runs on your own machine, a game built by a coding agent, and small tools that make those agents easier to live with.
 
 <br>
 
@@ -12,11 +12,13 @@ Kata is Japanese for form: a short sequence you repeat every day, until one day 
 
 <a href="https://github.com/alan890104/sumi"><img src="assets/form-sumi.svg" width="100%" alt="Form 02: Sumi. Press a key, speak, and the words land at your cursor, already tidied."></a>
 
-<a href="https://github.com/alan890104/qwen3-asr-rs"><img src="assets/form-asr.svg" width="100%" alt="Form 03: qwen3-asr-rs. Qwen3-ASR speech recognition in pure Rust, streaming on Metal and CUDA."></a>
+<a href="https://github.com/alan890104/Eldor"><img src="assets/form-eldor.svg" width="100%" alt="Form 03: Eldor. A spirit-battle RPG in the browser, built by a coding agent I directed. Six elements on a ring, each beating the next."></a>
 
-<a href="https://github.com/alan890104/claude-code-paste-preview"><img src="assets/form-paste.svg" width="100%" alt="Form 04: paste-preview. See the images you paste into Claude Code, and circle what matters."></a>
+<a href="https://github.com/alan890104/qwen3-asr-rs"><img src="assets/form-asr.svg" width="100%" alt="Form 04: qwen3-asr-rs. Qwen3-ASR speech recognition in pure Rust, streaming on Metal and CUDA."></a>
 
-<a href="https://github.com/Ton-Dynasty/tondynasty-contracts"><img src="assets/form-tact.svg" width="100%" alt="Form 05: tondynasty-contracts. Reusable traits and standards for TON smart contracts, written in Tact."></a>
+<a href="https://github.com/alan890104/claude-code-paste-preview"><img src="assets/form-paste.svg" width="100%" alt="Form 05: paste-preview. See the images you paste into Claude Code, and circle what matters."></a>
+
+<a href="https://github.com/Ton-Dynasty/tondynasty-contracts"><img src="assets/form-tact.svg" width="100%" alt="Form 06: tondynasty-contracts. Reusable traits and standards for TON smart contracts, written in Tact."></a>
 
 <br>
 
@@ -24,6 +26,7 @@ Kata is Japanese for form: a short sequence you repeat every day, until one day 
 
 **For coding agents**<br>
 [claude-telegram-hook](https://github.com/alan890104/claude-telegram-hook) lets you approve Claude Code from your phone.<br>
+[launchkit](https://github.com/alan890104/launchkit) lets Claude deploy to Cloud Run, Neon, Upstash and Cloudflare through one login.<br>
 [phoebe-chubby-codex-pet](https://github.com/alan890104/phoebe-chubby-codex-pet) puts a round, occasionally furious friend in Codex.<br>
 [unsee](https://github.com/alan890104/unsee) is an experiment in keeping secrets out of an agent's context.
 

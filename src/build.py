@@ -2,7 +2,7 @@
 """Draws every picture on the profile page.
 
 The hero is a year of practice: one brush mark per day, darker the more was done, and the busiest
-days in bloom. Four plates show four forms, numbered like kata. A seal with a blossom closes the page.
+days in bloom. The plates show the forms, numbered like kata. A seal with a blossom closes the page.
 
 Every word is set as outlines from the fonts in src/fonts, so the pictures look the same on every
 screen and need nothing from outside. Numbers come from GitHub and crates.io; when a fetch fails,
@@ -43,6 +43,9 @@ FORMS = [
     dict(key='sumi', repo='alan890104/sumi', name='Sumi',
          line='Press a key, speak, and the words land at your cursor, already tidied.',
          tags=['Rust', 'Tauri', 'macOS']),
+    dict(key='eldor', repo='alan890104/Eldor', name='Eldor',
+         line='A spirit-battle RPG in the browser, built by a coding agent I directed.',
+         tags=['TypeScript', 'three.js', 'Web Audio']),
     dict(key='asr', repo='alan890104/qwen3-asr-rs', name='qwen3-asr-rs',
          line='Qwen3-ASR speech recognition in pure Rust, streaming on Metal and CUDA.',
          tags=['Rust', 'candle']),
@@ -398,6 +401,45 @@ def motif_sumi(t):
             f'<g fill="{t["ink"]}">{"".join(words)}</g>{caret}')
 
 
+def motif_eldor(t):
+    """The game's six elements on their ring, each beating the next: water puts out fire, fire burns
+    wood, and on round to thunder, which beats water. The advantage runs the ring, one beat at a time."""
+    cx, cy, r = AX + AW / 2, AY + AH / 2 + 2, 88
+    names = ['Water', 'Fire', 'Nature', 'Wind', 'Earth', 'Thunder']
+    pts = [(cx + r * math.cos(math.radians(-120 + i * 60)), cy + r * math.sin(math.radians(-120 + i * 60))) for i in range(6)]
+
+    def arc(i):
+        a0, a1 = -120 + i * 60 + 9, -120 + (i + 1) * 60 - 9
+        x0, y0 = cx + r * math.cos(math.radians(a0)), cy + r * math.sin(math.radians(a0))
+        x1, y1 = cx + r * math.cos(math.radians(a1)), cy + r * math.sin(math.radians(a1))
+        return f'M{x0:.1f} {y0:.1f}A{r} {r} 0 0 1 {x1:.1f} {y1:.1f}', a1
+
+    out, beat = [], 1.5
+    for i in range(6):
+        d, a1 = arc(i)
+        # an arrowhead at the arc's end, pointing on round the ring
+        ex, ey = cx + r * math.cos(math.radians(a1)), cy + r * math.sin(math.radians(a1))
+        tx, ty = -math.sin(math.radians(a1)), math.cos(math.radians(a1))
+        nx, ny = math.cos(math.radians(a1)), math.sin(math.radians(a1))
+        head = (f'M{ex - 9 * tx + 5 * nx:.1f} {ey - 9 * ty + 5 * ny:.1f}L{ex:.1f} {ey:.1f}'
+                f'L{ex - 9 * tx - 5 * nx:.1f} {ey - 9 * ty - 5 * ny:.1f}')
+        out.append(f'<path d="{d}" fill="none" stroke="{t["edge"]}" stroke-width="2"/>'
+                   f'<path d="{head}" fill="none" stroke="{t["mute"]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>'
+                   f'<path class="beat" style="animation-delay:{i * beat:.1f}s" d="{d}" fill="none" stroke="{t["seal"]}" '
+                   'stroke-width="3" stroke-linecap="round" pathLength="100" stroke-dasharray="100"/>')
+    for i, ((x, y), name) in enumerate(zip(pts, names)):
+        out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="7" fill="{t["card"]}" stroke="{t["ink"]}" stroke-width="2"/>'
+                   f'<circle class="hit" style="animation-delay:{((i - 1) % 6) * beat:.1f}s" cx="{x:.1f}" cy="{y:.1f}" r="7" fill="{t["seal"]}"/>')
+        side = math.cos(math.radians(-120 + i * 60))
+        if abs(side) > .9:
+            lx, ly, anchor = x + (18 if side > 0 else -18), y + 5, 'start' if side > 0 else 'end'
+        else:
+            lx, ly, anchor = x, y + (-18 if y < cy else 30), 'middle'
+        out.append(text(MONO, name, 15, lx, ly, t['mute'], anchor=anchor))
+    out.append(text(ITALIC, '×1.5', 40, cx, cy + 13, t['ink'], anchor='middle'))
+    return ''.join(out)
+
+
 def motif_asr(t):
     """A spectrogram read as it streams: the scan moves on, the columns behind it light up."""
     cols, rows = 28, 12
@@ -481,7 +523,7 @@ def motif_tact(t):
     return ''.join(out) + code
 
 
-MOTIFS = dict(torch=motif_torch, sumi=motif_sumi, asr=motif_asr, paste=motif_paste, tact=motif_tact)
+MOTIFS = dict(torch=motif_torch, sumi=motif_sumi, eldor=motif_eldor, asr=motif_asr, paste=motif_paste, tact=motif_tact)
 
 STYLES = dict(
     torch='',
@@ -489,6 +531,10 @@ STYLES = dict(
           '@keyframes speak{from{transform:scaleY(1)}to{transform:scaleY(.45)}}'
           '.word{animation:write .35s ease-out both}@keyframes write{from{opacity:0}to{opacity:1}}'
           '.caret{animation:blink 1.1s steps(1) infinite}@keyframes blink{50%{opacity:0}}'),
+    eldor=('.beat{opacity:0;animation:beat 9s cubic-bezier(.4,0,.2,1) infinite}'
+           '@keyframes beat{0%{stroke-dashoffset:100;opacity:1}7%,16%{stroke-dashoffset:0;opacity:1}26%,100%{stroke-dashoffset:0;opacity:0}}'
+           '.hit{opacity:0;transform-box:fill-box;transform-origin:center;animation:hit 9s ease-out infinite}'
+           '@keyframes hit{0%,6%{opacity:0;transform:scale(.4)}8%{opacity:1;transform:scale(1.3)}12%,22%{opacity:1;transform:none}32%,100%{opacity:0;transform:none}}'),
     asr=('.col{opacity:.22;animation:hear 5.6s ease-out infinite}'
          '@keyframes hear{0%{opacity:.22}3%{opacity:1}78%{opacity:1}96%,100%{opacity:.22}}'
          '.scan{animation:scan 5.6s linear infinite}'
