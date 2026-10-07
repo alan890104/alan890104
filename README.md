@@ -1,30 +1,41 @@
-<h1 align="center">Hi 👋, I'm Hsu, Yu Lun</h1>
-<h3 align="center">Co-Founder of Ton Dynasty</h3>
+<img src="assets/hero.svg" width="100%" alt="Yu Lun Hsu, kata builder. Same form, every day, until it blooms. A year of contributions drawn as one brush stroke per day; the busiest days are in bloom.">
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=alan890104&label=Profile%20views&color=0e75b6&style=flat" alt="alan890104" /> </p>
+<br>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=alan890104" alt="alan890104" /></a> </p>
+Founder of [Torch Finance](https://torch.finance), stablecoin liquidity on TON and Curve Finance's official TVM partner.
 
-- 🔭 I’m currently working on [**Ton Dynasty Contracts**](https://github.com/Ton-Dynasty/tondynasty-contracts)
+Kata, 型, is Japanese for form: a short sequence you repeat every day, until one day it blooms. I build software the same way. These days the forms are speech recognition that runs on your own machine, and small tools that make coding agents easier to live with.
 
-- 🌱 I’m currently learning **The Open Network | Security analysis of blockchain**
+<br>
 
-- 💬 Ask me about **soidity, tact, golang, vue, k8s, devOps, gitOps**
+<a href="https://github.com/alan890104/sumi"><img src="assets/form-sumi.svg" width="100%" alt="Form 01: Sumi. Press a key, speak, and the words land at your cursor, already tidied."></a>
 
-- 📫 How to reach me **alan890104@gmail.com**
+<a href="https://github.com/alan890104/qwen3-asr-rs"><img src="assets/form-asr.svg" width="100%" alt="Form 02: qwen3-asr-rs. Qwen3-ASR speech recognition in pure Rust, streaming on Metal and CUDA."></a>
 
-- 📄 Know about my experiences [https://github.com/alan890104/Resume/blob/main/resume.pdf](https://github.com/alan890104/Resume/blob/main/resume.pdf)
+<a href="https://github.com/alan890104/claude-code-paste-preview"><img src="assets/form-paste.svg" width="100%" alt="Form 03: paste-preview. See the images you paste into Claude Code, and circle what matters."></a>
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/yu lun hsu" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="yu lun hsu" height="30" width="40" /></a>
-</p>
+<a href="https://github.com/Ton-Dynasty/tondynasty-contracts"><img src="assets/form-tact.svg" width="100%" alt="Form 04: tondynasty-contracts. Reusable traits and standards for TON smart contracts, written in Tact."></a>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://golang.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40"/> </a> <a href="https://grafana.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="grafana" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://jestjs.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg" alt="jest" width="40" height="40"/> </a> <a href="https://kubernetes.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.nginx.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://redis.io" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> <a href="https://vuejs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/> </a> <a href="https://vuetifyjs.com/en/" target="_blank" rel="noreferrer"> <img src="https://bestofjs.org/logos/vuetify.svg" alt="vuetify" width="40" height="40"/> </a> </p>
+<br>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=alan890104&show_icons=true&locale=en&layout=compact" alt="alan890104" /></p>
+### Smaller forms
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=alan890104&show_icons=true&locale=en" alt="alan890104" /></p>
+**For coding agents**<br>
+[unsee](https://github.com/alan890104/unsee) keeps your secrets out of an agent's context.<br>
+[claude-telegram-hook](https://github.com/alan890104/claude-telegram-hook) lets you approve Claude Code from your phone.<br>
+[phoebe-chubby-codex-pet](https://github.com/alan890104/phoebe-chubby-codex-pet) puts a round, occasionally furious friend in Codex.
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=alan890104&" alt="alan890104" /></p>
+**On chain**<br>
+[Torch Stable Swap](https://github.com/torch-core/torch-dex-contract), Curve's stable swap on TON, won the [Curve competition hosted by TON](https://blog.ton.org/infrastructures-for-stable-assets-with-curve).<br>
+[tep-vault-standard](https://github.com/torch-core/tep-vault-standard) is the reference for TEP-524 tokenized vaults, in Tolk.<br>
+[tolk-auth](https://github.com/torch-core/tolk-auth) gives TON contracts role-based permissions.<br>
+[solcix](https://github.com/Solratic/solcix) switches Solidity compiler versions in one command.
+
+**Upstream**<br>
+Merged into [speech-swift](https://github.com/soniqo/speech-swift), [ton-assets](https://github.com/tonkeeper/ton-assets), [DefiLlama-Adapters](https://github.com/DefiLlama/DefiLlama-Adapters), [ton-blockchain/sandbox](https://github.com/ton-blockchain/sandbox), [gqlgen](https://github.com/99designs/gqlgen) and [nebula-python](https://github.com/vesoft-inc/nebula-python).
+
+<br>
+
+<img src="assets/close.svg" width="100%" alt="A seal reading 型, kata. Still practicing.">
+
+[torch.finance](https://torch.finance)&emsp;[sumivoice.com](https://sumivoice.com)&emsp;[LinkedIn](https://www.linkedin.com/in/%E5%BE%90%E7%85%9C%E5%80%AB/)&emsp;[alan890104@gmail.com](mailto:alan890104@gmail.com)

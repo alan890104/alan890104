@@ -1,0 +1,27 @@
+# Redraws the pictures every night, so the year of practice and the numbers on the plates stay true.
+name: redraw
+on:
+  schedule:
+    - cron: '17 18 * * *'
+  workflow_dispatch:
+  push:
+    paths: ['src/**']
+permissions:
+  contents: write
+jobs:
+  redraw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install fonttools uharfbuzz
+      - run: python src/build.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets src/data.json
+          git diff --cached --quiet || { git commit -m 'Redraw with the day’s numbers' && git push; }
