@@ -2,7 +2,7 @@
 """Draws every picture on the profile page.
 
 The hero is a year of practice: one brush mark per day, darker the more was done, and the busiest
-days in bloom. Four plates show four forms, numbered like kata. A seal closes the page.
+days in bloom. Four plates show four forms, numbered like kata. A seal with a blossom closes the page.
 
 Every word is set as outlines from the fonts in src/fonts, so the pictures look the same on every
 screen and need nothing from outside. Numbers come from GitHub and crates.io; when a fetch fails,
@@ -35,8 +35,11 @@ ASSETS = ROOT / 'assets'
 DATA = ROOT / 'src' / 'data.json'
 USER = 'alan890104'
 
-# The four forms on the plates, in order.
+# The forms on the plates, in order. A form with no repo shows the roles instead of numbers.
 FORMS = [
+    dict(key='torch', repo=None, name='Torch Finance',
+         line="Stablecoin liquidity on TON, and Curve Finance's official TVM partner.",
+         roles=['Founder', 'Architect'], tags=['TON', 'Tolk', 'FunC']),
     dict(key='sumi', repo='alan890104/sumi', name='Sumi',
          line='Press a key, speak, and the words land at your cursor, already tidied.',
          tags=['Rust', 'Tauri', 'macOS']),
@@ -121,7 +124,6 @@ SERIF = Face('InstrumentSerif-Regular.ttf')
 ITALIC = Face('InstrumentSerif-Italic.ttf')
 MONO = Face('JetBrainsMono-Regular.ttf')
 MONO_M = Face('JetBrainsMono-Medium.ttf')
-KATA = Face('LXGWWenKaiTC-Bold-kata.ttf')
 
 
 def text(face, s, size, x, y, fill, track=0, anchor='start', cls=''):
@@ -165,7 +167,7 @@ def fmt(n):
 # ---------- shared marks ----------
 
 def tick_shape(level):
-    """The day's mark: 一, the first stroke a calligrapher practices. A slanted entry, a body that
+    """The day's mark: the single horizontal stroke a calligrapher practices first. A slanted entry, a body that
     thins a little, and the press at the end; longer and heavier with more practice."""
     L = 5.5 + level * 2.6
     T = 2.4 + level * .44
@@ -179,6 +181,8 @@ def tick_shape(level):
 
 # A sakura petal, tip notched, pointing up from the flower's heart, radius 10.
 PETAL = 'M0 0C-5.6-2.6-7.4-8.4-2.4-10.6L0-8.9L2.4-10.6C7.4-8.4 5.6-2.6 0 0Z'
+# The seal's petal: lifted off the heart and more deeply notched, since it is cut small.
+SEAL_PETAL = 'M0-2.8C-5.8-4.4-7.4-10-3.1-12.2L0-10.4L3.1-12.2C7.4-10 5.8-4.4 0-2.8Z'
 
 
 def blossom(t, cx, cy, r, turn, delay, cls='bl'):
@@ -194,20 +198,23 @@ def blossom(t, cx, cy, r, turn, delay, cls='bl'):
 
 
 def seal(t, x, y, size, carved, turn=0, cls=''):
-    """A square seal reading 型. Carved (白文): the character is cut out of the red.
-    Raised (朱文): the character and its border are the red."""
+    """A square seal with a cherry blossom in it, and no words.
+    Carved: the flower is cut out of the red. Raised: the flower and its border are the red.
+    The petals stand apart and the small seal is cut clean, so it reads as a flower, not a gear."""
     c = f' class="{cls}"' if cls else ''
     pad = size * 0.11
-    glyph = KATA.path('型', size * 0.74, x + size / 2, y + size * 0.765, anchor='middle')
+    cx, cy = x + size / 2, y + size / 2
+    flower, hole = (t['on_seal'], t['seal']) if carved else (t['seal'], t['on_seal'])
+    petals = ''.join(f'<path d="{SEAL_PETAL}" transform="rotate({a * 72})"/>' for a in range(5))
+    bloom = (f'<g transform="translate({cx:.1f} {cy + size * .02:.1f}) rotate(18) scale({size * .032:.3f})" fill="{flower}">'
+             f'{petals}<circle r="2" fill="{hole}"/></g>')
     if carved:
-        body = (f'<rect x="{x}" y="{y}" width="{size}" height="{size}" rx="{size * .09:.1f}" fill="{t["seal"]}"/>'
-                f'<path d="{glyph}" fill="{t["on_seal"]}"/>')
+        body = f'<rect x="{x}" y="{y}" width="{size}" height="{size}" rx="{size * .09:.1f}" fill="{t["seal"]}"/>{bloom}'
     else:
         body = (f'<rect x="{x + pad / 2}" y="{y + pad / 2}" width="{size - pad}" height="{size - pad}" '
-                f'rx="{size * .07:.1f}" fill="none" stroke="{t["seal"]}" stroke-width="{size * .055:.1f}"/>'
-                f'<path d="{glyph}" fill="{t["seal"]}"/>')
-    cx, cy = x + size / 2, y + size / 2
-    return (f'<g{c} filter="url(#rough)" transform="rotate({turn} {cx} {cy})">{body}</g>')
+                f'rx="{size * .07:.1f}" fill="none" stroke="{t["seal"]}" stroke-width="{size * .055:.1f}"/>{bloom}')
+    rough = '' if size < 60 else ' filter="url(#rough)"'
+    return (f'<g{c}{rough} transform="rotate({turn} {cx} {cy})">{body}</g>')
 
 
 ROUGH = ('<filter id="rough" x="-10%" y="-10%" width="120%" height="120%">'
@@ -290,13 +297,18 @@ AX, AY, AW, AH = 580, 40, 380, 240
 
 
 def plate(t, d, n, form, motif):
-    stats = d['forms'][form['key']]
+    stats = d['forms'].get(form['key'], {})
     name_size = min(80, 470 / SERIF.width(form['name'], 1))
     lines = SERIF.wrap(form['line'], 29, 470)[:2]
-    meta = [(fmt(stats['stars']), 'stars')]
+    meta = [(fmt(stats['stars']), 'stars')] if 'stars' in stats else []
     if stats.get('downloads'):
         meta.append((fmt(stats['downloads']), 'downloads'))
     meta_svg, x = '', 48
+    for role in form.get('roles', []):
+        meta_svg += text(MONO_M, role, 15, x, 280, t['ink'])
+        x += MONO_M.width(role, 15) + 18
+    if form.get('roles'):
+        x += 8
     for num, word in meta:
         meta_svg += text(MONO_M, num, 15, x, 280, t['ink'])
         x += MONO_M.width(num, 15) + 8
@@ -320,6 +332,43 @@ def plate(t, d, n, form, motif):
 
 def envelope(u, rnd_peaks):
     return sum(a * math.exp(-((u - c) ** 2) / (2 * w * w)) for c, a, w in rnd_peaks)
+
+
+def motif_torch(t):
+    """Curve's StableSwap invariant, the curve Torch's pools trade on: flat in the middle like a sum,
+    bending like a product at the ends. The pool's state slides along it, swap after swap."""
+    A, D, top = 8, 1, 1.25
+    ox, oy, side = AX + 84, AY + 226, 222
+
+    def at(x, y):
+        return ox + x / top * side, oy - y / top * side
+
+    def stable(x):
+        a = 16 * A * x
+        b = 16 * A * x * x + 4 * D * x - 16 * A * D * x
+        return (-b + math.sqrt(b * b + 4 * a * D ** 3)) / (2 * a)
+
+    def line(points):
+        return 'M' + ' L'.join(f'{px:.1f} {py:.1f}' for px, py in points)
+
+    xs = [0.03 * (top / 0.03) ** (i / 140) for i in range(141)]
+    curve = line([at(x, stable(x)) for x in xs if stable(x) <= top])
+    product = line([at(x, .25 / x) for x in xs if .2 <= x <= top and .25 / x <= top])
+    middle = line([at(x, stable(x)) for x in [.28 + i * .44 / 40 for i in range(41)]])
+    (x0, y0), (x1, y1) = at(0, top), at(top, 0)
+    sx, sy = at(1, 0)
+    tx, ty = at(0, 1)
+    return (
+        f'<path d="M{x0:.1f} {y0:.1f}V{oy}H{x1:.1f}" fill="none" stroke="{t["edge"]}" stroke-width="1.6"/>'
+        f'<path d="M{tx:.1f} {ty:.1f}L{sx:.1f} {sy:.1f}" fill="none" stroke="{t["mute"]}" stroke-width="1.4" stroke-dasharray="3 6" stroke-linecap="round" opacity=".7"/>'
+        f'<path d="{product}" fill="none" stroke="{t["mute"]}" stroke-width="1.4" opacity=".55"/>'
+        f'<path d="{curve}" fill="none" stroke="{t["ink"]}" stroke-width="2.8" stroke-linecap="round"/>'
+        f'<g><circle r="13" fill="{t["seal"]}" opacity=".16"/><circle r="5.5" fill="{t["seal"]}"/>'
+        f'<animateMotion dur="7s" repeatCount="indefinite" path="{middle}" keyPoints="0;1;0" keyTimes="0;.5;1" '
+        'calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/></g>'
+        + text(MONO, 'USDT', 14, x1, oy + 22, t['mute'], anchor='end')
+        + text(MONO, 'tgUSD', 14, ox - 12, y0 + 10, t['mute'], anchor='end')
+    )
 
 
 def motif_sumi(t):
@@ -432,9 +481,10 @@ def motif_tact(t):
     return ''.join(out) + code
 
 
-MOTIFS = dict(sumi=motif_sumi, asr=motif_asr, paste=motif_paste, tact=motif_tact)
+MOTIFS = dict(torch=motif_torch, sumi=motif_sumi, asr=motif_asr, paste=motif_paste, tact=motif_tact)
 
 STYLES = dict(
+    torch='',
     sumi=('.bar{transform-box:fill-box;transform-origin:center;animation:speak ease-in-out infinite alternate}'
           '@keyframes speak{from{transform:scaleY(1)}to{transform:scaleY(.45)}}'
           '.word{animation:write .35s ease-out both}@keyframes write{from{opacity:0}to{opacity:1}}'
@@ -456,7 +506,7 @@ STYLES = dict(
 
 def close(t, d):
     W, H = 1000, 132
-    body = (f'<defs>{ROUGH}</defs>'
+    body = (f'<defs>{ROUGH}<path id="petal" d="{PETAL}"/></defs>'
             + seal(t, 4, 18, 92, carved=False, turn=-3, cls='stamp')
             + text(ITALIC, 'Still practicing.', 44, 128, 72, t['ink'])
             + text(MONO, f'drawn {d["drawn"]}', 15, 130, 106, t['mute']))
@@ -500,6 +550,8 @@ def fetch(old):
     except Exception as e:
         print('calendar: kept the last one', e, file=sys.stderr)
     for form in FORMS:
+        if not form['repo']:
+            continue
         stats = d['forms'].setdefault(form['key'], {})
         try:
             stats['stars'] = get(f'https://api.github.com/repos/{form["repo"]}')['stargazers_count']

@@ -4,17 +4,19 @@
 
 Founder of [Torch Finance](https://torch.finance), stablecoin liquidity on TON and Curve Finance's official TVM partner.
 
-Kata, 型, is Japanese for form: a short sequence you repeat every day, until one day it blooms. I build software the same way. These days the forms are speech recognition that runs on your own machine, and small tools that make coding agents easier to live with.
+Kata is Japanese for form: a short sequence you repeat every day, until one day it blooms. I build software the same way. These days the forms are speech recognition that runs on your own machine, and small tools that make coding agents easier to live with.
 
 <br>
 
-<a href="https://github.com/alan890104/sumi"><img src="assets/form-sumi.svg" width="100%" alt="Form 01: Sumi. Press a key, speak, and the words land at your cursor, already tidied."></a>
+<a href="https://github.com/torch-core"><img src="assets/form-torch.svg" width="100%" alt="Form 01: Torch Finance. Stablecoin liquidity on TON, and Curve Finance's official TVM partner. Founder and architect."></a>
 
-<a href="https://github.com/alan890104/qwen3-asr-rs"><img src="assets/form-asr.svg" width="100%" alt="Form 02: qwen3-asr-rs. Qwen3-ASR speech recognition in pure Rust, streaming on Metal and CUDA."></a>
+<a href="https://github.com/alan890104/sumi"><img src="assets/form-sumi.svg" width="100%" alt="Form 02: Sumi. Press a key, speak, and the words land at your cursor, already tidied."></a>
 
-<a href="https://github.com/alan890104/claude-code-paste-preview"><img src="assets/form-paste.svg" width="100%" alt="Form 03: paste-preview. See the images you paste into Claude Code, and circle what matters."></a>
+<a href="https://github.com/alan890104/qwen3-asr-rs"><img src="assets/form-asr.svg" width="100%" alt="Form 03: qwen3-asr-rs. Qwen3-ASR speech recognition in pure Rust, streaming on Metal and CUDA."></a>
 
-<a href="https://github.com/Ton-Dynasty/tondynasty-contracts"><img src="assets/form-tact.svg" width="100%" alt="Form 04: tondynasty-contracts. Reusable traits and standards for TON smart contracts, written in Tact."></a>
+<a href="https://github.com/alan890104/claude-code-paste-preview"><img src="assets/form-paste.svg" width="100%" alt="Form 04: paste-preview. See the images you paste into Claude Code, and circle what matters."></a>
+
+<a href="https://github.com/Ton-Dynasty/tondynasty-contracts"><img src="assets/form-tact.svg" width="100%" alt="Form 05: tondynasty-contracts. Reusable traits and standards for TON smart contracts, written in Tact."></a>
 
 <br>
 
@@ -36,6 +38,6 @@ Merged into [speech-swift](https://github.com/soniqo/speech-swift), [ton-assets]
 
 <br>
 
-<img src="assets/close.svg" width="100%" alt="A seal reading 型, kata. Still practicing.">
+<img src="assets/close.svg" width="100%" alt="A seal with a cherry blossom. Still practicing.">
 
 [torch.finance](https://torch.finance)&emsp;[sumivoice.com](https://sumivoice.com)&emsp;[LinkedIn](https://www.linkedin.com/in/%E5%BE%90%E7%85%9C%E5%80%AB/)&emsp;[alan890104@gmail.com](mailto:alan890104@gmail.com)
