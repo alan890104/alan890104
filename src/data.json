@@ -15,7 +15,7 @@
    "stars": 120
   }
  },
- "total": 5080,
+ "total": 5077,
  "calendar": [
   [
    {
@@ -913,25 +913,25 @@
    {
     "date": "2026-02-24",
     "weekday": 2,
-    "count": 0,
-    "level": 0
+    "count": 1,
+    "level": 1
    },
    {
     "date": "2026-02-25",
     "weekday": 3,
-    "count": 14,
+    "count": 13,
     "level": 1
    },
    {
     "date": "2026-02-26",
     "weekday": 4,
-    "count": 8,
+    "count": 9,
     "level": 1
    },
    {
     "date": "2026-02-27",
     "weekday": 5,
-    "count": 9,
+    "count": 8,
     "level": 1
    },
    {
@@ -957,13 +957,13 @@
    {
     "date": "2026-03-03",
     "weekday": 2,
-    "count": 16,
+    "count": 17,
     "level": 1
    },
    {
     "date": "2026-03-04",
     "weekday": 3,
-    "count": 12,
+    "count": 11,
     "level": 1
    },
    {
@@ -1157,7 +1157,7 @@
    {
     "date": "2026-04-04",
     "weekday": 6,
-    "count": 7,
+    "count": 8,
     "level": 1
    }
   ],
@@ -1171,7 +1171,7 @@
    {
     "date": "2026-04-06",
     "weekday": 1,
-    "count": 15,
+    "count": 14,
     "level": 1
    },
    {
@@ -1787,14 +1787,14 @@
    {
     "date": "2026-07-13",
     "weekday": 1,
-    "count": 75,
+    "count": 76,
     "level": 3
    },
    {
     "date": "2026-07-14",
     "weekday": 2,
-    "count": 82,
-    "level": 4
+    "count": 81,
+    "level": 3
    },
    {
     "date": "2026-07-15",
@@ -2257,7 +2257,7 @@
    {
     "date": "2026-09-26",
     "weekday": 6,
-    "count": 56,
+    "count": 57,
     "level": 3
    }
   ],
@@ -2265,8 +2265,8 @@
    {
     "date": "2026-09-27",
     "weekday": 0,
-    "count": 28,
-    "level": 2
+    "count": 27,
+    "level": 1
    },
    {
     "date": "2026-09-28",
@@ -2329,14 +2329,8 @@
     "weekday": 3,
     "count": 19,
     "level": 1
-   },
-   {
-    "date": "2026-10-08",
-    "weekday": 4,
-    "count": 3,
-    "level": 1
    }
   ]
  ],
- "drawn": "2026-10-08"
+ "drawn": "2026-10-07"
 }
