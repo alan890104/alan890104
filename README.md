@@ -23,9 +23,9 @@ Kata is Japanese for form: a short sequence you repeat every day, until one day 
 ### Smaller forms
 
 **For coding agents**<br>
-[unsee](https://github.com/alan890104/unsee) keeps your secrets out of an agent's context.<br>
 [claude-telegram-hook](https://github.com/alan890104/claude-telegram-hook) lets you approve Claude Code from your phone.<br>
-[phoebe-chubby-codex-pet](https://github.com/alan890104/phoebe-chubby-codex-pet) puts a round, occasionally furious friend in Codex.
+[phoebe-chubby-codex-pet](https://github.com/alan890104/phoebe-chubby-codex-pet) puts a round, occasionally furious friend in Codex.<br>
+[unsee](https://github.com/alan890104/unsee) is an experiment in keeping secrets out of an agent's context.
 
 **On chain**<br>
 [Torch Stable Swap](https://github.com/torch-core/torch-dex-contract), Curve's stable swap on TON, won the [Curve competition hosted by TON](https://blog.ton.org/infrastructures-for-stable-assets-with-curve).<br>
