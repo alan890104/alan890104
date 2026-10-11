@@ -2,11 +2,11 @@
  "forms": {
   "sumi": {
    "stars": 28,
-   "downloads": 639
+   "downloads": 647
   },
   "asr": {
    "stars": 27,
-   "downloads": 35567
+   "downloads": 35597
   },
   "paste": {
    "stars": 36
@@ -18,52 +18,8 @@
    "stars": 0
   }
  },
- "total": 5414,
+ "total": 5715,
  "calendar": [
-  [
-   {
-    "date": "2025-10-05",
-    "weekday": 0,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-06",
-    "weekday": 1,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-07",
-    "weekday": 2,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-08",
-    "weekday": 3,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-09",
-    "weekday": 4,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-10",
-    "weekday": 5,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-11",
-    "weekday": 6,
-    "count": 0,
-    "level": 0
-   }
-  ],
   [
    {
     "date": "2025-10-12",
@@ -1715,7 +1671,7 @@
     "date": "2026-07-01",
     "weekday": 3,
     "count": 108,
-    "level": 1
+    "level": 2
    },
    {
     "date": "2026-07-02",
@@ -1759,7 +1715,7 @@
     "date": "2026-07-08",
     "weekday": 3,
     "count": 75,
-    "level": 1
+    "level": 2
    },
    {
     "date": "2026-07-09",
@@ -1785,19 +1741,19 @@
     "date": "2026-07-12",
     "weekday": 0,
     "count": 76,
-    "level": 1
+    "level": 2
    },
    {
     "date": "2026-07-13",
     "weekday": 1,
     "count": 76,
-    "level": 1
+    "level": 2
    },
    {
     "date": "2026-07-14",
     "weekday": 2,
     "count": 81,
-    "level": 1
+    "level": 2
    },
    {
     "date": "2026-07-15",
@@ -1909,7 +1865,7 @@
     "date": "2026-08-01",
     "weekday": 6,
     "count": 89,
-    "level": 1
+    "level": 2
    }
   ],
   [
@@ -2155,7 +2111,7 @@
     "date": "2026-09-09",
     "weekday": 3,
     "count": 80,
-    "level": 1
+    "level": 2
    },
    {
     "date": "2026-09-10",
@@ -2337,21 +2293,29 @@
     "date": "2026-10-08",
     "weekday": 4,
     "count": 162,
-    "level": 2
+    "level": 3
    },
    {
     "date": "2026-10-09",
     "weekday": 5,
     "count": 176,
-    "level": 2
+    "level": 3
    },
    {
     "date": "2026-10-10",
     "weekday": 6,
-    "count": 464,
+    "count": 468,
+    "level": 4
+   }
+  ],
+  [
+   {
+    "date": "2026-10-11",
+    "weekday": 0,
+    "count": 297,
     "level": 4
    }
   ]
  ],
- "drawn": "2026-10-11"
+ "drawn": "2026-10-12"
 }
