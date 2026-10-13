@@ -2,11 +2,11 @@
  "forms": {
   "sumi": {
    "stars": 28,
-   "downloads": 649
+   "downloads": 653
   },
   "asr": {
    "stars": 27,
-   "downloads": 35748
+   "downloads": 35765
   },
   "paste": {
    "stars": 36
@@ -18,7 +18,7 @@
    "stars": 0
   }
  },
- "total": 6447,
+ "total": 6614,
  "calendar": [
   [
    {
@@ -1249,7 +1249,7 @@
     "date": "2026-04-25",
     "weekday": 6,
     "count": 144,
-    "level": 4
+    "level": 3
    }
   ],
   [
@@ -1257,7 +1257,7 @@
     "date": "2026-04-26",
     "weekday": 0,
     "count": 49,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-04-27",
@@ -1615,7 +1615,7 @@
     "date": "2026-06-22",
     "weekday": 1,
     "count": 61,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-06-23",
@@ -1627,13 +1627,13 @@
     "date": "2026-06-24",
     "weekday": 3,
     "count": 58,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-06-25",
     "weekday": 4,
     "count": 48,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-06-26",
@@ -1665,25 +1665,25 @@
     "date": "2026-06-30",
     "weekday": 2,
     "count": 62,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-07-01",
     "weekday": 3,
     "count": 108,
-    "level": 3
+    "level": 2
    },
    {
     "date": "2026-07-02",
     "weekday": 4,
     "count": 52,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-07-03",
     "weekday": 5,
     "count": 54,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-07-04",
@@ -1771,7 +1771,7 @@
     "date": "2026-07-17",
     "weekday": 5,
     "count": 45,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-07-18",
@@ -1815,7 +1815,7 @@
     "date": "2026-07-24",
     "weekday": 5,
     "count": 47,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-07-25",
@@ -1835,19 +1835,19 @@
     "date": "2026-07-27",
     "weekday": 1,
     "count": 53,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-07-28",
     "weekday": 2,
     "count": 57,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-07-29",
     "weekday": 3,
     "count": 46,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-07-30",
@@ -1865,7 +1865,7 @@
     "date": "2026-08-01",
     "weekday": 6,
     "count": 89,
-    "level": 3
+    "level": 2
    }
   ],
   [
@@ -1935,13 +1935,13 @@
     "date": "2026-08-12",
     "weekday": 3,
     "count": 50,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-08-13",
     "weekday": 4,
     "count": 58,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-08-14",
@@ -1953,7 +1953,7 @@
     "date": "2026-08-15",
     "weekday": 6,
     "count": 45,
-    "level": 2
+    "level": 1
    }
   ],
   [
@@ -1961,7 +1961,7 @@
     "date": "2026-08-16",
     "weekday": 0,
     "count": 49,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-08-17",
@@ -2049,13 +2049,13 @@
     "date": "2026-08-30",
     "weekday": 0,
     "count": 45,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-08-31",
     "weekday": 1,
     "count": 50,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-09-01",
@@ -2105,7 +2105,7 @@
     "date": "2026-09-08",
     "weekday": 2,
     "count": 50,
-    "level": 2
+    "level": 1
    },
    {
     "date": "2026-09-09",
@@ -2293,13 +2293,13 @@
     "date": "2026-10-08",
     "weekday": 4,
     "count": 162,
-    "level": 4
+    "level": 3
    },
    {
     "date": "2026-10-09",
     "weekday": 5,
     "count": 176,
-    "level": 4
+    "level": 3
    },
    {
     "date": "2026-10-10",
@@ -2324,10 +2324,10 @@
    {
     "date": "2026-10-13",
     "weekday": 2,
-    "count": 114,
-    "level": 3
+    "count": 281,
+    "level": 4
    }
   ]
  ],
- "drawn": "2026-10-13"
+ "drawn": "2026-10-14"
 }
