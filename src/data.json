@@ -1,15 +1,15 @@
 {
  "forms": {
   "sumi": {
-   "stars": 28,
-   "downloads": 743
+   "stars": 29,
+   "downloads": 745
   },
   "asr": {
    "stars": 31,
-   "downloads": 36952
+   "downloads": 37063
   },
   "paste": {
-   "stars": 57
+   "stars": 59
   },
   "tact": {
    "stars": 121
@@ -18,52 +18,8 @@
    "stars": 1
   }
  },
- "total": 9037,
+ "total": 9060,
  "calendar": [
-  [
-   {
-    "date": "2025-10-26",
-    "weekday": 0,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-27",
-    "weekday": 1,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-28",
-    "weekday": 2,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-29",
-    "weekday": 3,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-30",
-    "weekday": 4,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-10-31",
-    "weekday": 5,
-    "count": 0,
-    "level": 0
-   },
-   {
-    "date": "2025-11-01",
-    "weekday": 6,
-    "count": 0,
-    "level": 0
-   }
-  ],
   [
    {
     "date": "2025-11-02",
@@ -2351,7 +2307,15 @@
     "count": 68,
     "level": 1
    }
+  ],
+  [
+   {
+    "date": "2026-11-01",
+    "weekday": 0,
+    "count": 23,
+    "level": 1
+   }
   ]
  ],
- "drawn": "2026-11-01"
+ "drawn": "2026-11-02"
 }
