@@ -2,11 +2,11 @@
  "forms": {
   "sumi": {
    "stars": 30,
-   "downloads": 915
+   "downloads": 929
   },
   "asr": {
    "stars": 31,
-   "downloads": 37580
+   "downloads": 37587
   },
   "paste": {
    "stars": 64
@@ -18,7 +18,7 @@
    "stars": 1
   }
  },
- "total": 10033,
+ "total": 10208,
  "calendar": [
   [
    {
@@ -2330,10 +2330,16 @@
    {
     "date": "2026-11-18",
     "weekday": 3,
-    "count": 60,
+    "count": 176,
+    "level": 2
+   },
+   {
+    "date": "2026-11-19",
+    "weekday": 4,
+    "count": 59,
     "level": 1
    }
   ]
  ],
- "drawn": "2026-11-18"
+ "drawn": "2026-11-19"
 }
